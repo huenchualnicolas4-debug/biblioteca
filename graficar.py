@@ -14,7 +14,7 @@ nue = [float(r["nuevo_ms"]) for r in filas]
 
 plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 10})
 fig, ax = plt.subplots(figsize=(7.2, 3.4), dpi=200)
-fig.patch.set_facecolor("#fcfcfb"); ax.set_facecolor("#fcfcfb")
+fig.patch.set_facecolor("#ffffff"); ax.set_facecolor("#ffffff")
 ax.plot(n, her, color="#2a78d6", lw=2, marker="o", ms=5, label="Monolito heredado (búsqueda lineal)")
 ax.plot(n, nue, color="#eb6834", lw=2, marker="o", ms=5, label="Servicio de catálogo (índice invertido)")
 ax.set_xscale("log"); ax.set_yscale("log")
