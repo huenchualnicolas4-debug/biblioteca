@@ -35,6 +35,7 @@ def medir(funcion, consultas):
 
 
 def main():
+    # random solo genera datos de prueba reproducibles; no se usa para seguridad
     rng = random.Random(42)
     filas = []
     for n in TAMANOS:
@@ -43,7 +44,7 @@ def main():
         for isbn, titulo, autor, cant in generar_libros(n, rng):
             heredado.agregar_libro(isbn, titulo, autor, cant)
             nuevo.agregar_libro(isbn, titulo, autor, cant)
-        consultas = [f"vol{rng.randrange(n)}" for _ in range(CONSULTAS)]
+        consultas = [f"vol{rng.randrange(n)}" for _ in range(CONSULTAS)]  # NOSONAR
         t_her = medir(heredado.buscar, consultas)
         t_nue = medir(nuevo.buscar, consultas)
         filas.append((n, round(t_her, 4), round(t_nue, 4)))

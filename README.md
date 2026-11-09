@@ -14,7 +14,7 @@ separado en tres servicios con responsabilidades únicas:
 ## Cómo ejecutar
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt          # herramientas locales (incluye matplotlib)
 pytest --cov=servicios --cov-report=term-missing   # 26 pruebas, 100 % cobertura
 pylint servicios legacy                             # análisis estático
 python benchmark.py && python graficar.py           # rendimiento heredado vs nuevo
